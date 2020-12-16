@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work 4-Dec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="head">
+            <div class="signInPage">
+                <a class="topBtn" href="index1.html">Sign in</a>
+
+
+            </div>
+            <div class="signUpPage">
+                <a class="topBtn" href="">
+                    Sign up
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <form action="#" onsubmit="signUpForm()">
+            <table class="formSignup">
+                <tr>
+                    <td>Name :</td>
+                    <td>
+                        <input id="names" class="inputS" type="text" required placeholder="Enter your Name">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td>
+                        <input id="emails" class="inputS" type="email" required placeholder="Enter your Email">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td>
+                        <input id="passwords" class="inputS" type="password" required placeholder="Enter your Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td class="radioBtn">
+                        <input id="female" type="radio" name="gender" value="f">
+                        <label for="female">Female</label>
+                        <input id="male" type="radio" name="gender" checked value="m">
+                        <label for="male">Male</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <button class="signUpBtn">Sign Up</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <script>
+        let arr = [];
+
+        function signUpForm() {
+            let name = document.getElementById("names").value;
+            localStorage.setItem("names", name);
+            let email = document.getElementById("emails").value;
+            localStorage.setItem("emails", email);
+            let passwords = document.getElementById("passwords").value;
+            localStorage.setItem("passwords", passwords);
+            let male = document.getElementById("male").checked;
+            localStorage.setItem("male", male);
+            let female = document.getElementById("female").checked;
+            localStorage.setItem("female", female);
+            if (male === true) {
+                arr.push("Name :" + name, "Email :" + email, "Password :" + passwords, "Male :" + male);
+            }
+            else {
+                arr.push("Name :" + name, "Email :" + email, "Password :" + passwords, "Female :" + female);
+            }
+            alert(arr)
+
+        }
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>

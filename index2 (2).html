@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logOut">
+            <a class="topBtn" href="index.html">
+                Log Out
+            </a>
+        </div>
+        <div class="profileName" id="Name1">
+
+        </div>
+    </header>
+
+    <div class="profile">
+        <a href="index.html"><button>Log Out</button></a>
+        <br>
+        <br>
+        <br>
+        <label>Welcome :</label>
+        <span style="text-align: center;" id="Name"> </span>
+        <br>
+        <br>
+        <br>
+        <label>Email :</label>
+        <span style="text-align: center;" id="Email"> </span>
+        <br>
+        <br>
+        <br>
+        <label>Gender :</label>
+        Male :
+        <span style="text-align: center;" id="male"> </span>
+        <br>
+        <br>
+        Female :
+        <span style="text-align: center;" id="female"> </span>
+    </div>
+
+    <script>
+        document.getElementById("Name1").innerHTML = localStorage.getItem("names1");
+        document.getElementById("Name").innerHTML = localStorage.getItem("names");
+        document.getElementById("Email").innerHTML = localStorage.getItem("emails");
+        document.getElementById("male").innerHTML = localStorage.getItem("male");
+        document.getElementById("female").innerHTML = localStorage.getItem("female");
+
+    </script>
+
+
+
+</body>
+
+
+</html>
